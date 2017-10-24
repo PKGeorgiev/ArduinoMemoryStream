@@ -3,7 +3,7 @@ A memory backed Stream descendant. Implements a Ring buffer. In case the buffer 
 
 You can specify buffer's size in the Contructor. If not specified the default buffer size is 128 bytes. The memory will be allocated dynamically.
 
-There is a second constructor that allows you to specify external buffer.
+There is a second constructor that allows you to specify an external buffer.
 
 # Example
 

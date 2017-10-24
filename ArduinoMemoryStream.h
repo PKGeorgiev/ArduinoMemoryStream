@@ -9,8 +9,8 @@
 
 class ArduinoMemoryStream : public Stream {
   public:
-    ArduinoMemoryStream(int bufferSize);
-    ArduinoMemoryStream(byte* buffer, int bufferSize, int contentSize);
+    ArduinoMemoryStream(uint16_t bufferSize);
+    ArduinoMemoryStream(byte* buffer, uint16_t bufferSize, uint16_t contentSize);
     ~ArduinoMemoryStream();
     int available();
     int read();
@@ -21,10 +21,10 @@ class ArduinoMemoryStream : public Stream {
   protected:
     byte* _buffer;
     bool _internalBuffer = true;
-    unsigned int _size;
-    volatile int _contentSize = 0;
-    volatile int _start = 0;
-    volatile int _end = 0;
+    uint16_t _size;
+    volatile uint16_t _contentSize = 0;
+    volatile uint16_t _start = 0;
+    volatile uint16_t _end = 0;
 };
 
 #endif

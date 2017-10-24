@@ -1,12 +1,12 @@
 #include<ArduinoMemoryStream.h>
 
-ArduinoMemoryStream::ArduinoMemoryStream(int bufferSize = 128){
+ArduinoMemoryStream::ArduinoMemoryStream(uint16_t bufferSize = 128){
   _size = bufferSize;  
   _buffer = (byte*)malloc(_size);
   memset(_buffer, 0, _size);
 };
 
-ArduinoMemoryStream::ArduinoMemoryStream(byte* buffer, int bufferSize, int contentSize = 0) {
+ArduinoMemoryStream::ArduinoMemoryStream(byte* buffer, uint16_t bufferSize, uint16_t contentSize = 0) {
   _size = bufferSize;
   _buffer = buffer;
   _internalBuffer = false;
